@@ -1,18 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>HTML School — Lesson 001</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Project</title>
-</head>
+    <body>
+        <div class="app">
+            <!-- LEFT SIDEBAR -->
+            <aside class="sidebar">
+                <div class="brand">
+                    <div class="brand-icon" aria-hidden="true">&lt;/&gt;</div>
+                    <div>
+                        <div class="brand-name">HTML School</div>
+                        <div class="brand-subtitle">Your coding journey</div>
+                    </div>
+                </div>
 
-<body>
-    start
+                <nav class="sidebar-nav" aria-label="Lesson steps">
+                    <div class="sidebar-label">YOUR FIRST LESSON</div>
+                    <div class="lesson-list" id="lessonList"></div>
+                </nav>
 
-    <script src="./assets/js/main.js"></script>
-</body>
+                <div class="sidebar-bottom">
+                    <div class="mini-icon" aria-hidden="true">🌱</div>
+                    <strong>Small steps matter.</strong>
+                    <p>Learn one concept, try it yourself, and keep growing.</p>
+                </div>
+            </aside>
 
+            <!-- MAIN LESSON -->
+            <main class="main">
+                <header class="topbar">
+                    <div class="breadcrumb">
+                        HTML Basics / <strong>Lesson 001</strong>
+                    </div>
+                    <div class="level">
+                        <span class="level-dot"></span>
+                        Beginner level
+                    </div>
+                </header>
+
+                <div class="content">
+                    <div class="progress-area">
+                        <div class="progress-label">
+                            <span id="progressText">Your learning journey</span>
+                            <span id="progressPercent">20% complete</span>
+                        </div>
+                        <div
+                            class="progress-track"
+                            role="progressbar"
+                            aria-label="Lesson progress"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="20"
+                            id="progressBar"
+                        >
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+
+                    <section id="lessonContent" aria-live="polite"></section>
+
+                    <div class="lesson-nav">
+                        <button class="btn" id="prevBtn" type="button">
+                            ← Previous
+                        </button>
+
+                        <span class="lesson-counter" id="lessonCounter">
+                            Step 1 of 5
+                        </span>
+
+                        <button
+                            class="btn btn-primary"
+                            id="nextBtn"
+                            type="button"
+                        >
+                            Next step →
+                        </button>
+                    </div>
+
+                    <p class="lesson-note">
+                        Made for curious beginners · Learn by doing
+                    </p>
+                </div>
+            </main>
+        </div>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>
